@@ -10,6 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
+import Blog from "../icons/Blog.svg";
 
 import Locale from "../locales";
 
@@ -21,6 +22,7 @@ import {
   NARROW_SIDEBAR_WIDTH,
   Path,
   REPO_URL,
+  SELF_BLOG,
 } from "../constant";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -119,10 +121,8 @@ export function SideBar(props: { className?: string }) {
       }`}
     >
       <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>ChatGPT Next</div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        <div className={styles["sidebar-title"]}>ChatGPT for BarneyJiang</div>
+        <div className={styles["sidebar-sub-title"]}>科技改变生活.</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -176,6 +176,11 @@ export function SideBar(props: { className?: string }) {
           <div className={styles["sidebar-action"]}>
             <a href={REPO_URL} target="_blank">
               <IconButton icon={<GithubIcon />} shadow />
+            </a>
+          </div>
+          <div className={styles["sidebar-action"]}>
+            <a href={SELF_BLOG} target="_blank">
+              <IconButton icon={<Blog />} shadow />
             </a>
           </div>
         </div>
